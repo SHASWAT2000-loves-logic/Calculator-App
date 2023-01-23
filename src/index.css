@@ -1,13 +1,121 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#calculator{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  background-color: #f4f4f4;
+}
+.center{
+  background-color: black;
+  color: #fff;
+  font-weight: bold;
+  padding: 30px;
+}
+.display{
+  padding: 20px;
+  background-color: #fff;
+  width: 280px;
+  height: 150px;
+  text-align: right;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.display:focus{
+  outline: none;
+}
+.digits, .options, .operations{
+  padding: 20px 25px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #555;
+  font-size: 24px;
+}
+.digits{
+  background-color: #28282B;
+}
+.operations{
+  background-color: orange;
+}
+.options{
+  background-color: #999;
+  border: none;
+}
+.zero, .clear{
+  border-radius: 2rem;
+}
+.grid_container{
+  display: grid;
+  grid-template-areas: 
+  'clear clear decim divide'
+  'seven eight nine mult'
+  'four five six subt'
+  'one two three addition'
+  'zeroed zeroed zeroed equal';
+  gap: 10px;
+}
+.clear{
+  grid-area: clear;
+}
+.divide{
+  grid-area: divide;
+}
+.seven{
+  grid-area: seven;
+}
+.eight{
+  grid-area: eight;
+}
+.nine{
+  grid-area: nine;
+}
+.multiply{
+  grid-area: mult;
+}
+.four{
+  grid-area: four;
+}
+.five{
+  grid-area: five;
+}
+.six{
+  grid-area: six;
+}
+.subtract{
+  grid-area: subt;
+}
+.one{
+  grid-area: one;
+}
+.two{
+  grid-area: two;
+}
+.three{
+  grid-area: three;
+}
+.subtract{
+  grid-area: subt;
+}
+.add{
+  grid-area: addition;
+}
+.zero{
+  grid-area: zeroed;
+}
+.dot{
+  grid-area: decim;
+}
+.equal{
+  grid-area: equal;
 }
