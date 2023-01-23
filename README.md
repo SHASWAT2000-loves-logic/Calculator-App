@@ -4,7 +4,7 @@
 
 **Commit history** - 
 
-**First major commit (01/22/2023) ** - Created the UI for the calculator
+**First major commit (01/22/2023)** - Created the UI for the calculator
 
 # Getting Started with this project
 
