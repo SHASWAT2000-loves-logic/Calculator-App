@@ -1,13 +1,23 @@
+/* This is the global stylesheet which styles the calculator */
+
+/* TO-DO 
+1. change font family 
+2. hover effect 
+3. replace math symbols with better ones 
+4. think something about the background cover 
+5. style the border of the calculator */
+
+
+/* CSS reset */
+
 *{
   padding:0;
   margin:0;
   box-sizing: border-box;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
+
+/* placing the calculator at the center of the page */
+
 #calculator{
   height: 100vh;
   display: flex;
@@ -17,12 +27,17 @@ input::-webkit-inner-spin-button {
   font-weight: bold;
   background-color: #f4f4f4;
 }
-.center{
+
+/* styling the main calculator area */
+
+.calculator_area{
   background-color: black;
   color: #fff;
-  font-weight: bold;
   padding: 30px;
 }
+
+/* styling the textbox where the result is displayed */
+
 .display{
   padding: 20px;
   background-color: #fff;
@@ -32,29 +47,15 @@ input::-webkit-inner-spin-button {
   font-size: 24px;
   margin-bottom: 20px;
 }
+
+/* removing the border color of the textbox when we click inside the textbox */
+
 .display:focus{
   outline: none;
 }
-.digits, .options, .operations{
-  padding: 20px 25px;
-  border-radius: 50%;
-  text-align: center;
-  background-color: #555;
-  font-size: 24px;
-}
-.digits{
-  background-color: #28282B;
-}
-.operations{
-  background-color: orange;
-}
-.options{
-  background-color: #999;
-  border: none;
-}
-.zero, .clear{
-  border-radius: 2rem;
-}
+
+/* creating the layout for the grid */
+
 .grid_container{
   display: grid;
   grid-template-areas: 
@@ -65,6 +66,58 @@ input::-webkit-inner-spin-button {
   'zeroed zeroed zeroed equal';
   gap: 10px;
 }
+
+/* converting the digits into circular buttons */
+
+.digits, .options, .operations{
+  padding: 20px 25px;
+  border-radius: 50%;
+  text-align: center;
+  background-color: #555;
+  cursor: pointer;
+}
+
+/* specific styling for digits, mathematical operations, and options for the user */
+
+
+/* styling digit buttons from 0 to 9 */
+
+.digits, 
+.digits .btn{
+  background-color: #28282B;
+}
+
+/* styling for operations like +, -, *, / */
+
+.operations, .operations .btn{
+  background-color: orange;
+}
+
+/* styling the options like all clear (AC) and delete last digit */
+
+.options, .options .btn{
+  background-color: #999;
+}
+
+.zero, .clear{
+  border-radius: 2rem;
+}
+
+
+/* general styling for all the buttons in the keypad */
+
+.btn{
+  border: none;
+  font-size: 24px;
+  color:#fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+/* marking the grid areas in the grid template areas */
+
 .clear{
   grid-area: clear;
 }
