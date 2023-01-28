@@ -1,6 +1,6 @@
 // This is where we create the global context provider
 
-// Here all the global states, functions that are used throughout the app are declared and defined
+// Here are all the global states, functions that are used throughout the app are declared and defined
 
 /*
 TODO - 
@@ -20,31 +20,47 @@ export const CalculatorProvider = ({ children }) => {
   // Stores the user input and displays it in the display screen
   const [displayValue, setDisplayValue] = useState("");
 
-  // handles the click event on digits and operations
+  // handles the click event on digits (0-9) and operations (+, -, x, ÷)
   const handleClick = (e) => {
     setDisplayValue((prev) => `${prev}${e.target.value}`);
   };
 
+  // handles the event when the backspace button is clicked
   const removeLastDigit = () => {
     setDisplayValue((prev) => prev.slice(0, -1));
   };
 
-  // handles the event when the user clicks the "=" button to calculate something
+  // handles the event when the user clicks the "=" button to calculate the expression on the screen
+  // math-expression-calculator package doesn't allow "x" and "÷" in its input expression and will throw an error, so they are replaced
 
   const getAnswer = () => {
-    // console.log("here");
+    // storing the input expression
     let inputValue = displayValue;
+    // checks for "x" and replaces it with "*"
     if (inputValue.includes("x")) {
       inputValue = inputValue.replaceAll("x", "*");
-    } else if (inputValue.includes("÷")) {
+    }
+    // checks for "÷" and replaces it with "/"
+    else if (inputValue.includes("÷")) {
       inputValue = inputValue.replaceAll("÷", "/");
     }
+    // creating the mexp (math-expression-calculator) object
     const mexp = new Mexp();
+
+    // calculating the result of the input expression
     let calculatedResult = mexp.eval(inputValue);
+
+    // converting the result into number so that we can take care of decimal numbers and trailing zeroes in decimal numbers
+
     calculatedResult = Number(calculatedResult);
+
+    // checking for numbers that have decimal in it
     if (!Number.isInteger(calculatedResult)) {
+      // trim the decimal result to showcase 3 decimal digits and multiplied by 1 to trim insignificant zeroes
       calculatedResult = calculatedResult.toFixed(3) * 1;
     }
+
+    // displaying the final calculated result
     setDisplayValue(calculatedResult.toString());
   };
 
