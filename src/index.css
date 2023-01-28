@@ -1,12 +1,15 @@
 /* This is the global stylesheet which styles the calculator */
 
-/* TO-DO 
-1. change font family 
-2. hover effect 
-3. replace math symbols with better ones 
-4. think something about the background cover 
-5. style the border of the calculator */
 
+
+/* Font family: Roboto (from Google fonts) */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body, 
+html{
+  font-family: 'Roboto', sans-serif;
+}
 
 /* CSS reset */
 
@@ -31,21 +34,22 @@
 /* styling the main calculator area */
 
 .calculator_area{
-  background-color: black;
+  background-color: #000;
   color: #fff;
   padding: 30px;
 }
 
-/* styling the textbox where the result is displayed */
+/* styling the display screen where the result is displayed */
 
 .display{
-  padding: 20px;
-  background-color: #fff;
-  width: 280px;
+  border: none;
+  background-color: #000;
+  width: 290px;
   height: 150px;
   text-align: right;
-  font-size: 24px;
-  margin-bottom: 20px;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: #fff;
 }
 
 /* removing the border color of the textbox when we click inside the textbox */
@@ -59,23 +63,30 @@
 .grid_container{
   display: grid;
   grid-template-areas: 
-  'clear clear decim divide'
+  'clear clear backspace divide'
   'seven eight nine mult'
   'four five six subt'
   'one two three addition'
-  'zeroed zeroed zeroed equal';
+  'zeroed zeroed decim equal';
   gap: 10px;
 }
 
 /* converting the digits into circular buttons */
 
-.digits, .options, .operations{
+.digits, 
+.options, 
+.operations{
   padding: 20px 25px;
   border-radius: 50%;
   text-align: center;
   background-color: #555;
   cursor: pointer;
 }
+.digits:hover,
+.options:hover,
+.operations:hover{
+  opacity: 0.7;
+} 
 
 /* specific styling for digits, mathematical operations, and options for the user */
 
@@ -89,20 +100,43 @@
 
 /* styling for operations like +, -, *, / */
 
-.operations, .operations .btn{
-  background-color: orange;
+.operations, 
+.operations .btn{
+  background-color: #ffa500;
 }
 
 /* styling the options like all clear (AC) and delete last digit */
 
-.options, .options .btn{
+.options, 
+.options .btn{
   background-color: #999;
 }
 
-.zero, .clear{
+.zero, 
+.clear{
   border-radius: 2rem;
 }
 
+/* styling the backspace button */
+
+.backspace{
+  grid-area: backspace;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #000;
+  background-color: #999;
+  color:#fff;
+  cursor: pointer;
+}
+.backspace:hover{
+  opacity: 0.7;
+}
+
+/* styling the equals symbol */
+.equals{
+  background-color: green;
+}
 
 /* general styling for all the buttons in the keypad */
 

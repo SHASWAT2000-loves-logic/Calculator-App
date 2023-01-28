@@ -9,7 +9,7 @@ function Display() {
 
       {/* this textbox displays the answer */}
       
-      <input type="text" name="calculation" className="display" readOnly={true} value={displayValue}/>
+      <input type="text" name="calculation" className="display" readOnly={true} value={displayValue} placeholder="0"/>
     </div>
   )
 }
