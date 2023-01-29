@@ -1,8 +1,6 @@
 **Project In Progress**
 
-**Project Description** - This repo contains the code to a calculator app. With this calculator you can carry out basic math operations like addition, subtraction, multiplication and division on integers and real numbers both. There is option of an all clear button and a backspace button.   
-
-**TO-DO**
+**Project Description** - This repo contains the code to a calculator app. With this calculator you can carry out basic math operations like addition, subtraction, multiplication and division on integers and real numbers both. There is option of an all clear button and a backspace button. In case of invalid user input, user is notified by an error notification, which acts like a pop-op and disappears after 4 seconds. A warning sign is also displayed on the screen, in case of invalid user input. 
 
 **Commit history** - 
 
