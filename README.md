@@ -3,7 +3,6 @@
 **Project Description** - This repo contains the code to a calculator app. With this calculator you can carry out basic math operations like addition, subtraction, multiplication and division on integers and real numbers both. There is option of an all clear button and a backspace button.   
 
 **TO-DO**
-1. Add UI/UX features to check invalid input, throw errors
 
 **Commit history** - 
 
@@ -12,6 +11,8 @@
 **Second major commit (01/24/2023)** - Added mathematical functionalities of addition, subtraction, multiplication and division
 
 **Third major commit (01/28/2023)** - Added functionality to clear and backspace button, used math-expression-calculator to do the calculation 
+
+**Fourth major commit (01/29/2023)** - Added UX features to handle invalid user input and display error notifications to user. 
 
 **Technologies used** - HTML, CSS, JavaScript
 
@@ -22,6 +23,8 @@
 **React packages used** - 
 
 1. math-expression-evaluator - allows us to calculate math expressions consisting of a combination of operators. This was a much better upgrade from only being able to do binary operations. 
+
+2. react-hot-toast - for error notifications when the user input is invalid. 
 
 **Bugs/Issues** - 
 
