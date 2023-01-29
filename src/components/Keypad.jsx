@@ -6,7 +6,7 @@ import { useContext } from "react";
 import CalculatorContext from "../context/CalculatorContext";
 
 function Keypad() {
-  const {handleClick, getAnswer, clearDisplay, removeLastDigit} = useContext(CalculatorContext);
+  const {handleClick, disabled,getAnswer, clearDisplay, removeLastDigit} = useContext(CalculatorContext);
   return (
     <div id="keypad">
       <div className="grid_container">
@@ -15,7 +15,7 @@ function Keypad() {
         
         <button className="btn clear options" onClick={clearDisplay}>AC</button>
         <button className="btn divide operations" onClick={handleClick} value="÷">÷</button>
-        <button className="backspace" onClick={removeLastDigit}>⌫</button>
+        <button className="backspace" onClick={removeLastDigit} disabled={disabled}>⌫</button>
 
 
         {/* second row in the calculator */}
@@ -43,7 +43,7 @@ function Keypad() {
 
         <button className="btn zero digits" onClick={handleClick} value="0">0</button>
         <button className="btn dot digits" onClick={handleClick} value={"."}>.</button>
-        <button className="btn equals operations" onClick={getAnswer}>=</button>
+        <button className="btn equals operations" onClick={getAnswer} disabled={disabled}>=</button>
       </div>
     </div>
   )
