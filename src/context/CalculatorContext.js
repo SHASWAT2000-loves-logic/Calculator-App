@@ -54,8 +54,8 @@ export const CalculatorProvider = ({ children }) => {
       // since the math-expression-evaluator doesn't treat "++" and "--" input as incorrect, we check it manually
       // if there is "++" or "--", then we display an error
       if (
-        displayValue.indexOf("++") != -1 ||
-        displayValue.indexOf("--") != -1
+        displayValue.indexOf("++") !== -1 ||
+        displayValue.indexOf("--") !== -1
       ) {
         setError(true); //displays the error signal on the screen
 
@@ -85,7 +85,7 @@ export const CalculatorProvider = ({ children }) => {
         // checking for expressions that are divide by 0
         // math-expression-evaluator evaluates it to Infinity, so we have to manually display an error
 
-        if (calculatedResult == "Infinity") {
+        if (calculatedResult === "Infinity") {
           setError(true);
           toast("Invalid input! Cannot divide by 0", {
             style: { borderRadius: "10px", background: "#333", color: "#fff" },

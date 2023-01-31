@@ -58,6 +58,32 @@ html{
   outline: none;
 }
 
+/* creating and styling the blinking cursor */
+
+.cursor {
+  position: relative;
+}
+.cursor i {
+  position: absolute;
+  width: 1px;
+  height: 23%;
+  background-color: #fff;
+  top: 53px;
+  right: 0px;
+  animation-name: blink;
+  animation-duration: 800ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+.cursor input:focus + i {
+  display: none;
+}
+
+@keyframes blink {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 /* positioning the error sign */
 
 .alert{
@@ -229,3 +255,6 @@ button:disabled:hover{
 .equal{
   grid-area: equal;
 }
+
+
+

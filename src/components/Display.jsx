@@ -14,7 +14,10 @@ function Display() {
       </div> }
 
       {/* this textbox displays the answer */}
-      <input type="text" name="calculation" className="display_result" readOnly={true} value={displayValue} placeholder="0"/>
+      <div className="cursor">
+        <input type="text" name="calculation" className="display_result" readOnly={true} value={displayValue} placeholder="0"/>
+        <i></i>
+      </div>
     </div>
   )
 }
