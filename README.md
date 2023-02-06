@@ -1,8 +1,8 @@
 
 
-**Project Description** - This repo contains the code to a calculator app. With this calculator you can carry out basic math operations like addition, subtraction, multiplication and division on integers and real numbers both. There is option of an all clear button and a backspace button. In case of invalid user input, user is notified by an error notification, which acts like a pop-op and disappears after 4 seconds. A warning sign is also displayed on the screen, in case of invalid user input and division by 0.
+**Project Description** - This repo contains the code to a calculator app. With this calculator you can carry out basic math operations like addition, subtraction, multiplication and division on integers and real numbers both. There is option of an all clear button and a backspace button. In case of invalid user input, user is notified by an error notification, which acts like a pop-op and disappears after 3 seconds. A warning sign is also displayed on the screen, in case of invalid user input and division by 0. 
 
-You can find the website by clicking on this link - https://main--subtle-souffle-989440.netlify.app/
+You can find the website by clicking on this link - https://main--classy-croissant-bc8ab8.netlify.app/
 
 **Motivation for the project** - I wanted to do a project that was focussed on improving user experience (UX). A simple calculator is very complex when it comes to handling various types of user input. With the help of this calculator, I have tried to "verify" user input in a way the user knows the mistake they are making.   
 
