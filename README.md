@@ -1,23 +1,37 @@
 
 
-**Project Description** - This repo contains the code to a calculator app. With this calculator you can carry out basic math operations like addition, subtraction, multiplication and division on integers and real numbers both. There is option of an all clear button and a backspace button. In case of invalid user input, user is notified by an error notification, which acts like a pop-op and disappears after 3 seconds. A warning sign is also displayed on the screen, in case of invalid user input and division by 0. 
+# Project Description
 
-You can find the website by clicking on this link - https://main--classy-croissant-bc8ab8.netlify.app/
+This repo contains the code to my calculator app. 
 
-**Motivation for the project** - I wanted to do a project that was focussed on improving user experience (UX). A simple calculator is very complex when it comes to handling various types of user input. With the help of this calculator, I have tried to "verify" user input in a way the user knows the mistake they are making.   
+## Features
 
-**Technologies used** - HTML, CSS, JavaScript
+1. Do basic math like addition, subtraction, multiplication and division with integers and decimal numbers (real numbers).
+2. An all clear button to clear all input and a backspace button to delete the last digit/operator that was entered by the user.
+3. Length of a number is limited to 10 digits and the user cannot divide by 0. 
+4. A warning sign and an error notification is displayed in case of invalid user input or if the length of the number is greater than 10.
 
-**Frameworks/Libraries** - React
+## Motivation for the project
 
-**3rd part API used** - None
+I wanted to do a project that was focussed on handling client side errors. A calculator is very simple in its functionality, but very complex when it comes to handling various types of user input.  
 
-**React packages used** - 
+## Major takeways from the project
 
-1. math-expression-evaluator - allows us to calculate math expressions consisting of a combination of operators. This was a much better upgrade from only being able to do binary operations. 
+1. Learnt how to effectively use grid-template areas in CSS. 
+2. How to improve user experience (UX) by catching various types of invalid user input like dividing by 0, catching something like 1++*/1, 1+-*/1, having too many digits in a number etc.   
+3. How to use npm packages for creating error notifications.  
 
-2. react-hot-toast - for error notifications when the user input is invalid. 
-**Commit history** - 
+## Project link - https://main--classy-croissant-bc8ab8.netlify.app/ 
+
+## Technologies used
+
+HTML, CSS, JavaScript
+
+## Frameworks/Libraries
+
+React
+
+## Commit history
 
 **First major commit (01/22/2023)** - Created the UI for the calculator
 
@@ -27,10 +41,25 @@ You can find the website by clicking on this link - https://main--classy-croissa
 
 **Fourth major commit (01/29/2023)** - Added UX features to handle invalid user input and display error notifications to user. 
 
-**Final commit (01/31/2023)** - Created the blinking cursor, added the calculator icon and deployed the application on Netlify. 
+**Final commit (01/31/2023)** - Created the blinking cursor, added the calculator icon and deployed the application on Netlify.
 
+**Update (02/05/2023)** - Added new features like number length limit, division by 0 error notification and fixed problem of havng 0 at the start of the number. Explanation can be found in the readme file of the new-features branch. 
 
-**Bugs/Issues** - 
+## 3rd part API used
+
+None
+
+## React packages used 
+
+1. math-expression-evaluator - allows us to calculate math expressions consisting of a combination of operators. This was a much better upgrade from only being able to do binary operations. 
+
+2. react-hot-toast - for error notifications when the user input is invalid. 
+ 
+## Media queries
+
+None
+
+## Bugs/Issues
 
 1. How to move forward from doing binary operations only (resolved) - I realized that the calculator was only able to do binary operations, that is having two operands and one operator. This was very inefficient, because that meant user cannot have a mix of operators in their calculations. 
 
@@ -38,6 +67,10 @@ You can find the website by clicking on this link - https://main--classy-croissa
 
 **Final fix** - I used math-expression-evaluator package to calculate math expressions that consist of various operators. 
 
+## How to further improve this website
+
+1. Display the exact error message to the user instead of having a generic error message. 
+2. Provide live validation of the user input so that the user knows that there is an error with their input before clicking the = button. 
 
 # Getting Started with this project
 
